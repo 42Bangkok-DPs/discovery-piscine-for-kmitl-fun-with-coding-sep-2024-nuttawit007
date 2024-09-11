@@ -47,7 +47,7 @@
 <body>
     <section class="container">
         <form id="calForm">
-            <input id='val1' type="number" value="" placeholder="enter positive number" required>
+            <input id='val1' type="text" value="" placeholder="enter a number" required>
             <select id="op">
                 <option value="+"> + </option>
                 <option value="-"> - </option>
@@ -55,7 +55,7 @@
                 <option value="/"> / </option>
                 <option value="%"> % </option>
             </select>
-            <input id='val2' type="number" value="" placeholder="enter positive number" required>
+            <input id='val2' type="text" value="" placeholder="enter a number" required>
             <button id='calBtn' type="submit">Try me!</button>
         </form>
     </section>
@@ -78,8 +78,20 @@
         let value2 = val2.value;
         let opar = op.value;
 
+        // ตรวจสอบว่าเป็นตัวเลขหรือไม่
+        if (isNaN(value1) || isNaN(value2)) {
+            alert("Error: Please enter valid numbers only.");
+            val1.value = "";
+            val2.value = "";
+            op.value = "+";
+            return;
+        }
+
+        value1 = parseFloat(value1);
+        value2 = parseFloat(value2);
+
         if (value1 < 0 || value2 < 0) {
-            alert("Error :(");
+            alert("Error");
 
             val1.value = "";
             val2.value = "";
@@ -102,5 +114,5 @@
         val2.value = "";
         op.value = "+";
     });
-  </script>
+</script>
 </html>
