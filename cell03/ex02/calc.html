@@ -80,11 +80,18 @@
 
         if (value1 < 0 || value2 < 0) {
             alert("Error :(");
+
+            val1.value = "";
+            val2.value = "";
+            op.value = "+";
             return;
         }
 
         if ((opar == "/" || opar == "%") && (value1 == 0 || value2 == 0)) {
             alert("It's over 9000!");
+            val1.value = "";
+            val2.value = "";
+            op.value = "+";
             return;
         }
 
