@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="balloon.css">
 </head>
 <body>
-
-    <div id="balloon" onclick="upsize()" onmouseleave="downsize()"></div>
+    <div class="container">
+        <div id="balloon" onclick="upsize()" onmouseleave="downsize()"></div>
+    </div>
 </body>
 <script>
     // เปลี่ยนสี
@@ -35,23 +36,23 @@
             balloon.style.height = newHeight + 'px';
 
         // เปลี่ยนสีบอลลูน
-        balloon.style.backgroundColor = colors[colorIndex]; // เปลี่ยนเป็นสีตาม index
+        balloon.style.backgroundColor = colors[colorIndex];
         // อัพเดตลำดับสี
-        colorIndex = (colorIndex + 1) % colors.length; // วนลูปกลับไปที่สีแรกหลังจากครบทั้ง 3 สี
+        colorIndex = (colorIndex + 1) % colors.length;
+        }
     }
-}
-// ลดขนาด
-function downsize() {
-    console.log("eiei");
-    let currentWidth = parseInt(window.getComputedStyle(balloon).width);
-    let currentHeight = parseInt(window.getComputedStyle(balloon).height);
+    // ลดขนาด
+    function downsize() {
+        console.log("eiei");
+        let currentWidth = parseInt(window.getComputedStyle(balloon).width);
+        let currentHeight = parseInt(window.getComputedStyle(balloon).height);
 
-    if (currentWidth > 200 && currentHeight > 200) {
-        let newWidth = currentWidth - 5;
-        let newHeight = currentHeight - 5;
-        balloon.style.width = newWidth + 'px';
-        balloon.style.height = newHeight + 'px';
-    }
-};
+        if (currentWidth > 200 && currentHeight > 200) {
+            let newWidth = currentWidth - 5;
+            let newHeight = currentHeight - 5;
+            balloon.style.width = newWidth + 'px';
+            balloon.style.height = newHeight + 'px';
+        }
+    };
 </script>
 </html>

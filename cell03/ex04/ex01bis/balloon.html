@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <link rel="stylesheet" href="balloon.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="balloon"></div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        // เปลี่ยนสี
+        let colorIndex = 0;
+        const colors = ['red', 'green', 'blue'];
+
+        // เพิ่มขนาด
+        $('#balloon').on('click', function() {
+            let balloon = $('#balloon');
+            let currentWidth = balloon.width();
+            let currentHeight = balloon.height();
+            
+            if (currentWidth >= 420 && currentHeight >= 420) {
+                // ถ้า width และ height เท่ากับหรือมากกว่า 420px ให้กลับไปขนาดเดิม
+                balloon.css({
+                    'width': '200px',
+                    'height': '200px'
+                });
+            } else {
+                // เพิ่มขนาดทีละ 10px
+                balloon.css({
+                    'width': currentWidth + 10 + 'px',
+                    'height': currentHeight + 10 + 'px',
+                    'background-color': colors[colorIndex]
+                });
+                // อัพเดตลำดับสี
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        });
+
+        // ลดขนาด
+        $('#balloon').on('mouseleave', function() {
+            let balloon = $('#balloon');
+            let currentWidth = balloon.width();
+            let currentHeight = balloon.height();
+
+            if (currentWidth > 200 && currentHeight > 200) {
+                balloon.css({
+                    'width': currentWidth - 5 + 'px',
+                    'height': currentHeight - 5 + 'px'
+                });
+            }
+        });
+    });
+</script>
+</html>
