@@ -70,9 +70,9 @@
     const op = document.getElementById("op");
     const calForm = document.getElementById("calForm");
 
-    // setInterval(() => {
-    //   alert("Please, use me...");
-    // }, 30000);
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
 
     calForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -83,6 +83,7 @@
 
         if (isNaN(value1) || isNaN(value2)) {
             alert("Error :(");
+            console.log("Error :(");
             val1.value = "";
             val2.value = "";
             op.value = "+";
@@ -94,7 +95,7 @@
 
         if (value1 < 0 || value2 < 0) {
             alert("Error :()");
-
+            console.log("Error :(");
             val1.value = "";
             val2.value = "";
             op.value = "+";
@@ -103,6 +104,7 @@
 
         if ((opar == "/" || opar == "%") && (value1 == 0 || value2 == 0)) {
             alert("It's over 9000!");
+            console.log("It's over 9000!");
             val1.value = "";
             val2.value = "";
             op.value = "+";
