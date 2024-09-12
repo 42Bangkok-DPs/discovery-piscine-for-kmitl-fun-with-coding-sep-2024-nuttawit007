@@ -18,20 +18,22 @@
         height: max-content;
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        padding: 30px;
+        gap: 20px;
+        padding: 20px 30px;
         border: 1px solid gray;
         border-radius: 20px;
-        box-shadow: 12px 11px 35px -8px rgba(131,199,90,1);
-        -webkit-box-shadow: 12px 11px 35px -8px rgba(131,199,90,1);
-        -moz-box-shadow: 12px 11px 35px -8px rgba(131,199,90,1);
+        box-shadow: 12px 11px 35px -8px rgb(169, 169, 169);
     }
 
     #val1, #val2, #op {
         height: 30px;
-        border-radius: 16px;
+        border-radius: 8px;
         padding: 0px 24px;
         border: 1px solid gray;
+    }
+
+    #op {
+        cursor: pointer;
     }
 
     #calBtn {
@@ -39,14 +41,16 @@
         height: 40px;
         border-radius: 12px;
         border: 1px solid gray;
-        background-color: rgb(13, 127, 21);
+        background-color: rgb(137, 45, 183);
         color: white;
+        cursor: pointer;
     }
 
 </style>
 <body>
     <section class="container">
         <form id="calForm">
+            <h1> Calculator </h1>
             <input id='val1' type="text" value="" placeholder="enter a number" required>
             <select id="op">
                 <option value="+"> + </option>
@@ -66,9 +70,9 @@
     const op = document.getElementById("op");
     const calForm = document.getElementById("calForm");
 
-    setInterval(() => {
-      alert("Please, use me...");
-    }, 30000);
+    // setInterval(() => {
+    //   alert("Please, use me...");
+    // }, 30000);
 
     calForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -78,7 +82,7 @@
         let opar = op.value;
 
         if (isNaN(value1) || isNaN(value2)) {
-            alert("Error: Please enter valid numbers only.");
+            alert("Error :(");
             val1.value = "";
             val2.value = "";
             op.value = "+";
@@ -89,7 +93,7 @@
         value2 = parseFloat(value2);
 
         if (value1 < 0 || value2 < 0) {
-            alert("Error");
+            alert("Error :()");
 
             val1.value = "";
             val2.value = "";
