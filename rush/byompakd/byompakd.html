@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth!important;
+    }
+</style>
+<body>
+    <!-- Nav Container-->
+    <section  class="h-24 w-full fixed top-0 flex justify-center items-center shadow-lg shadow-[#777ac0] bg-black backdrop-blur">
+        <!-- Nav Bar -->
+        <nav class="hidden sm:flex px-[60px] py-[12px] gap-10 text-2xl bg-[#6568AB] rounded-2xl text-white ">
+            <a href="#overview">Overview</a>
+            <a href="#activity">Activity</a>
+            <a href="../index.html">Home</a>
+        </nav>
+        <!-- Nav Bar sm -->
+        <nav  class="flex sm:hidden px-[60px] py-[12px] gap-10 text-2xl bg-[#6568AB] rounded-2xl text-white ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </nav>
+    </section>
+
+    <!-- Personal Information -->
+    <section id="overview" class="w-full h-max flex flex-wrap justify-center mt-20 gap-16 p-5 py-16 bg-black">
+        <!-- information -->
+        <div class="flex flex-col gap-6 justify-between ">
+            <!-- personal Info Header -->
+            <div class="flex gap-2 flex-wrap">
+                <p class="text-[#6568ab] text-4xl font-bold"> Personal </p>
+                <p class="text-[#52c077] text-4xl font-bold"> Information </p>
+            </div>
+            <!-- line break -->
+             <div class="w-full h-[2px] bg-[#6568ab] rounded-full"></div>
+             <!-- info describe-->
+             <div class="px-6 py-[18px] rounded-2xl border-4 border-[#52c077] flex-col justify-center items-start gap-2.5  shadow-lg shadow-[#777ac0]">
+                <div class="flex">
+                    <span class="text-[#6568ab] text-[32px] font-semibold">Fullname </span>
+                    <span class="hidden sm:flex text-white text-[32px] font-normal ml-2">: Benyapa Yompakdee </span>
+                    <span class="flex sm:hidden text-white text-[32px] font-normal ml-2">: Benyapa Y. </span>
+                </div>
+                <div>
+                    <span class="text-[#6568ab] text-[32px] font-semibold ">Nickname </span>
+                    <span class="text-white text-[32px] font-normal ml-2"> : aom </span>
+                </div>
+                <div class="flex">
+                    <span class="hidden sm:flex text-[#6568ab] text-[32px] font-semibold ">Date of birth</span>
+                    <span class="flex sm:hidden text-[#6568ab] text-[32px] font-semibold ">DOB</span>
+                    <span class="text-white text-[32px] font-normal ml-2 "> : 17 August 2004</span></div>
+                <div>
+                    <span class="text-[#6568ab] text-[32px] font-semibold ">Age</span>
+                    <span class="text-white text-[32px] font-normal ml-2"> : 20 year old</span>
+                </div>
+            </div>
+        </div>
+        <!-- Profile Image -->
+        <div class="h-max p-2.5 rounded-3xl border-4 border-[#6568ab] justify-start items-center gap-2.5">
+            <img class="w-80 h-80 rounded-3xl object-cover" src="img/profile.jpg" />
+        </div>
+
+
+    </section>
+
+    <!-- Skills and Contact -->
+    <section class="w-full h-max bg-black flex flex-wrap justify-center gap-4 p-5 py-10">
+        <!-- Skills -->
+        <div class="p-5 flex flex-col gap-5">
+            <div class="text-4xl font-bold text-[#6568ab]"> Skills </div>
+            <div class="pr-44 pl-6 py-[18px] rounded-2xl border-4 border-[#52c077] flex-col justify-center items-start gap-2.5  shadow-lg shadow-[#777ac0]">
+                    <div class="text-white text-[32px] font-normal "> Badminton </div>
+                    <div class="text-white text-[32px] font-normal "> Drawing & Painting </div>
+                    <div class="text-white text-[32px] font-normal "> Hammered Dulcimer </div>
+                    
+            </div>
+        </div>
+        <!-- Contact -->
+        <div class="p-5 flex flex-col gap-5">
+            <div class="text-4xl font-bold text-[#6568ab]"> Contact </div>
+            <div class="pr-44 pl-6  py-[18px] rounded-2xl border-4 border-[#52c077] flex-col justify-center items-start gap-2.5  shadow-lg shadow-[#777ac0]">
+                <div class="flex">
+                    <div class="text-[#6568ab] flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+                    <div class="text-white text-[32px] font-normal ml-2">: Benyapa Yompakdee </div>
+                </div>
+                <div class="flex">
+                    <span class="text-[#6568ab] flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></span>
+                    <span class="text-white text-[32px] font-normal ml-2"> :  aaom_byp </span>
+                </div>
+                <div class="flex">
+                    <span class="text-[#6568ab] flex items-center "><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                    <span class="text-white text-[32px] font-normal ml-2"> : 062292xxxx</span></div>
+                <div class="flex">
+                    <span class="text-[#6568ab] flex items-center "><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                    <span class="text-white text-[32px] font-normal ml-2"> : 20 year old</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Computer Skills -->
+    <section class="w-full h-max bg-black flex items-center justify-center p-5 py-10">
+        <!-- COmputer Icon-->
+        <div class=" p-5 flex flex-col gap-5">
+            <div class="text-4xl font-bold text-[#6568ab]"> Computer Skills </div>
+            <div class="max-w-[1100px] p-8 rounded-2xl border-4 border-[#52c077] flex flex-wrap gap-12 justify-around shadow-lg shadow-[#777ac0]">
+                <div class="flex flex-wrap gap-10 justify-center">
+                    <div><img src="img/html-icon.jpg" alt=""></div>
+                    <div><img src="img/css-icon.jpg" alt=""></div>
+                    <div><img src="img/figama-logo.jpg" alt=""></div>
+                    <div><img src="img/JS-icon.jpg" alt=""></div>
+                    <div><img src="img/tailwind.jpg" alt=""></div>
+        </div>
+    </section>
+
+    <!--Activity -->
+    <section id="activity" class="w-full h-max bg-black flex flex-col items-center py-10 p-5  gap-10 \">
+        <div  class="flex flex-wrap gap-2">
+            <p class="text-[#6568ab] text-4xl font-bold"> Activity : </p>
+            <p class="text-[#52c077] text-4xl font-bold"> PREPROGRAMMING</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="h-max p-2.5 rounded-3xl border-4 border-[#6568ab] justify-start items-center gap-2.5">
+                <img class="w-100 h-80 rounded-3xl object-cover" src="img/activity1.jpg" />
+            </div>
+            <div class="h-max p-2.5 rounded-3xl border-4 border-[#6568ab] justify-start items-center gap-2.5">
+                <img class="w-100 h-80 rounded-3xl object-cover" src="img/activity2.jpg" />
+            </div>
+            <div class="h-max p-2.5 rounded-3xl border-4 border-[#6568ab] justify-start items-center gap-2.5">
+                <img class="w-100 h-80 rounded-3xl object-cover" src="img/activity3.jpg" />
+            </div>
+            <div class="h-max p-2.5 rounded-3xl border-4 border-[#6568ab] justify-start items-center gap-2.5">
+                <img class="w-100 h-80 rounded-3xl object-cover" src="img/activity4.jpg" />
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="h-[60px] px-5 flex justify-end items-center bg-[#6568ab]">
+        <p class="text-white"> create by byompakd</p>
+    </footer>
+</body>
+</html>

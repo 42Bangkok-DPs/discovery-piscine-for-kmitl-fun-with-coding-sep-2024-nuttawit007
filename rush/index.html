@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="h-24 w-full  top-0 fixed flex justify-center items-center shadow-lg shadow-[#777ac0] bg-[#FAFBF6] z-50">
+        <!-- Nav Bar -->
+        <nav class="hidden sm:flex px-[60px] py-[12px] gap-10 text-2xl bg-[#6568AB] rounded-2xl text-white z-50 ">
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#teammember">Team Member</a>
+        </nav>
+        <!-- Nav Bar sm -->
+        <nav class="flex sm:hidden px-[60px] py-[12px] gap-10 text-2xl bg-[#6568AB] rounded-2xl text-white z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </nav>
+    </section>
+
+<style>
+    html {
+        scroll-behavior: smooth!important;
+    }
+    .back-box{
+        display: flex;
+        z-index: -1;
+        background-image: url(img/view.jpg);
+        margin-top: 90px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center
+    }
+    .container{
+        display: flex;
+        z-index: 0;
+        max-width: 80%;
+        height: 450px;
+        padding: 20px;
+        justify-self: center;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #C2C0C0;
+        background: rgba(217, 217, 217, 0.28);
+        backdrop-filter: blur(5px);
+        align-items: center;
+        overflow: hidden;
+    }
+    .su{
+        color: #6568AB;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.30);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #d7d7d7;
+        font-family: monospace;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        overflow: hidden;
+    }
+    .te{
+        color: #52C077;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #d7d7d7;
+        font-family: monospace;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.30);
+        overflow: hidden;
+    }
+    .text{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .container h2{
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .container h3{
+        color: #52C077;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #6568AB;
+        font-size: 30px;
+        font-weight: 800;
+        overflow: hidden;
+        
+    }
+    .button-box{
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        align-self: stretch;
+        margin-top: 20px;
+    }
+    button{
+        border-radius: 50px;
+        background: #6568AB;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 18px;
+        color: white;
+    }
+    button:hover{
+        color: black;
+        background-color: aliceblue;
+    }
+    .detail-box{
+        width: 100%;
+        height: auto;
+        background: #CACBF7;
+    }
+    .detail-box h1{
+        color: var(--purple, #6568AB);
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+    }
+    .contact-box{
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+        gap: 70px; 
+        padding: 20px; 
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        width: 80%; 
+        max-width: 300px;
+        height: auto; 
+        padding: 20px; 
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    @media (max-width: 768px) {
+        .contact {
+            width: 90%;
+            padding: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .contact {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    .contact h1{
+        font-size: 22px;
+        text-align: left;
+        color: black;
+    }
+    .contact button{
+        border-radius: 5px;
+        font-size: larger;
+    }
+    .contact button:hover{
+        background-color: black;
+        color: white;
+    }
+    .team-box{
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+        gap: 70px; 
+        padding: 20px; 
+        
+    }
+    .team{
+        display: flex;
+        width: 331px;
+        flex-direction: column;
+        align-items: center;
+        gap: 31px;
+    }
+    .team img{
+        width: 213px;
+        height: 213px;
+        image-rendering: 100%;
+        border-radius: 213px;
+
+    }
+    .team h2{
+        color: #6568AB;
+        font-weight: 600;
+        font-size: large;
+        margin-top: -15px;
+    }
+</style>
+    <section id="home" class="back-box">
+        <div class="container">
+            <div class="text">
+            <h1 class="su">SugarRush</h1><h1 class="te">Team</h1>
+            </div>
+            <h2 >WELCOME TO OUR COLLABORATIVE PORTFOLIO!</h2>
+            <h3>42Bangkok - Rush Project</h3>
+            <p>Welcome to our collaborative portfolio! As a creative duo, we are passionate about merging our unique skills to deliver innovative solutions. Here, you'll find a curated collection of our diverse projects, spanning from design to development, each showcasing our shared vision and commitment. Explore our work and discover how our partnership drives results. Let's create something extraordinary together!</p>
+            <div class="button-box">
+                <button><a href="./nphiphat/nphiphat.html">nphiphat Portfolio</a></button>
+                <button><a href="./byompakd/byompakd.html">byompakd Portfolio</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="detail-box">
+        <h1>Contact</h1>
+        <div class="contact-box">
+            <div class="contact">
+                <h1>Genius is one percent<br> inspiration and <br>ninety-nine percent</h1>
+                <button><a href="https://www.facebook.com/nuttawit.phiphatchirakul">Contact nphiphat</a></button>
+            </div>
+            <div class="contact">
+                <h1>Success is a journey,  <br> not a destination. <br>Enjoy the ride.<br>Embrace the journey</h1>
+                <button><a href="https://www.facebook.com/benyapa.byp.37/">Contact byompakd</a></button>
+            </div>
+        </div>
+
+        <h1 id="teammember">Teammember</h1>
+        <div class="team-box">
+            <div class="team">
+                <img class="object-cover" src="img/win.JPG" alt="">
+                <h2>Nuttawit Phiphatchirakul</h2>
+            </div>
+            <div class="team">
+                <img class="object-cover" src="img/aom.jpg" alt="">
+                <h2>Benyapa Yompakdee</h2>
+            </div>
+        </div>
+    </section>
+    <footer class="h-[60px] px-5 flex justify-end items-center bg-[#6568ab]">
+        <p class="text-white "> SugarRush Team </p>
+    </footer>
+</body>
+</html>
