@@ -42,7 +42,7 @@
             }
         });
 
-        // ลดขนาด
+        // ลดขนาดและเปลี่ยนสีถอยหลัง
         $('#balloon').on('mouseleave', function() {
             let balloon = $('#balloon');
             let currentWidth = balloon.width();
@@ -51,8 +51,11 @@
             if (currentWidth > 200 && currentHeight > 200) {
                 balloon.css({
                     'width': currentWidth - 5 + 'px',
-                    'height': currentHeight - 5 + 'px'
+                    'height': currentHeight - 5 + 'px',
+                    'background-color': colors[colorIndex]
                 });
+                // เปลี่ยนสีถอยหลัง
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
             }
         });
     });
