@@ -27,9 +27,12 @@ $(document).ready(function() {
     };
 
     const removeTodo = (index) => {
-        list.splice(index, 1);
-        updateCookie(JSON.stringify(list));
-        render();
+        const confirmed = confirm('Do you want to delete this todo');
+        if (confirmed) {
+            list.splice(index, 1);
+            updateCookie(JSON.stringify(list));
+            render();
+        }
     };
 
     const setCookie = (key, value) => {
@@ -46,8 +49,18 @@ $(document).ready(function() {
         for (let i = 0; i < cookies.length; i++) {
             const cookie = cookies[i].trim();
             if (cookie.startsWith(key + '=')) return cookie.substring(key.length + 1);
+            /*
+            key = 'todo'
+            cookie = 'todo=hello'
+
+            key + '=' >> 'todo='
+            4+1
+
+            "todo=hello >> hello"
+            
+            */
         }
-        return null;
+        return 0;
     };
 
     $addBtn.on('click', () => {

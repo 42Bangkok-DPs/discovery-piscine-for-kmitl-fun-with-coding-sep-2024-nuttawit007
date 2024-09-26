@@ -14,43 +14,38 @@
 </body>
 <script>
     $(document).ready(function() {
-
         let colorIndex = 0;
         const colors = ['red', 'green', 'blue'];
 
         $('#balloon').on('click', function() {
             let balloon = $('#balloon');
-            let currentWidth = balloon.width();
-            let currentHeight = balloon.height();
-
-            if (currentWidth >= 420 && currentHeight >= 420) {
-                balloon.css({
-                    'width': '200px',
-                    'height': '200px'
-                });
+            let size = parseInt(balloon.css('width'));
+            if (size + 10 > 420){
+                size = 200;
             } else {
-                balloon.css({
-                    'width': currentWidth + 10 + 'px',
-                    'height': currentHeight + 10 + 'px',
-                    'background-color': colors[colorIndex]
-                });
-                colorIndex = (colorIndex + 1) % colors.length;
+                size += 10;
             }
+            colorIndex++;
+            balloon.css("width", size + "px");
+            balloon.css("height", size + "px");
+            balloon.css("background-color", colors[colorIndex%3]);
         });
 
-        $('#balloon').on('mouseleave', function() {
+        $('#balloon').mouseleave(function() {
             let balloon = $('#balloon');
-            let currentWidth = balloon.width();
-            let currentHeight = balloon.height();
-
-            if (currentWidth > 200 && currentHeight > 200) {
-                balloon.css({
-                    'width': currentWidth - 5 + 'px',
-                    'height': currentHeight - 5 + 'px',
-                    'background-color': colors[colorIndex]
-                });
-                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+            let size = parseInt(balloon.css('width'));
+            if (size <= 200) {
+                size = 200;
+            } else {
+                size -= 5;
             }
+            colorIndex--;
+            if (colorIndex < 0) {
+                colorIndex = 2;
+            }
+            balloon.css("width", size + "px");
+            balloon.css("height", size + "px");
+            balloon.css("background-color", colors[colorIndex%3]);
         });
     });
 </script>
